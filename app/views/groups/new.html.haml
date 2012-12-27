@@ -1,0 +1,15 @@
+%html
+  %body
+    %h2 Welcome to Haml demo
+    %h3 Demo application
+    %br
+    %br
+    = form_for :gtpl,:url=>{:action=>'create'} do |f|
+      %p
+        Name:#{f.text_field :name}
+      %p
+        Age:#{f.text_field :age}
+           
+      = f.submit "submit"
+          
+      = link_to 'Back',:action=>'index'   

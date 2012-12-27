@@ -1,0 +1,9 @@
+%html
+  %body
+    %h2 Edit
+    = form_for @data, :url=>{:action =>'update',:id=>@data.id} do |f|
+      %p
+        name  #{f.text_field :name}
+      %p
+        age  #{f.text_field :age}
+      = f.submit 'update'
